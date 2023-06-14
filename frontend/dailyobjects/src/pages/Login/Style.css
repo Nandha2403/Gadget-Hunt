@@ -1,0 +1,22 @@
+.log_main {
+    width: 70%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.leftCont{
+    width: 39%;
+}
+
+
+
+@media all and (min-width: 230px) and (max-width: 990px) {
+    .log_main{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .leftCont{
+        margin-top: 5px;
+        width: 100%
+    }
+}

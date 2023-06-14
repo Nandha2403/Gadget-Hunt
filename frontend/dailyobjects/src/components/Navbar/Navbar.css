@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+
+/* ------------New-CSS------------- */
+
+.nav_root {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    margin: 0px;
+    background-color: white;
+    border-bottom: 0.1px solid #e2e8f0;
+    z-index: 100;
+    
+}
+.nav_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+.nav_logo {
+    width: 89px;
+    margin-left: 20px;
+    left: 20px;
+    cursor: pointer;
+
+}
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-account {
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.all-log {
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 0px solid transparent;
+    border-radius: 20px;
+    width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    transition: all 0.2s ease-in-out;
+    text-align: left;
+    display: none;
+    position: absolute;
+    z-index: 15;
+}
+.dropdown-menu:hover .all-log {
+    display: block;
+}
+.dropdown-menu:not(:hover) .all-log {
+    display: none;
+}
+.dropdown-menu li {
+    cursor: pointer;
+}
+
+.navCart {
+    /* padding: 8px 16px; */
+    cursor: pointer;
+}
+.navAdmin {
+    /* padding: 8px 16px; */
+    cursor: pointer;
+}
+
+.post-nav {
+    border: 0px solid red;
+    width: 100%;
+    margin-top: 7.5rem;
+    padding: 5px 150px;
+    background-color: #17274a;
+    color: #809aaa;
+    font-size: 14px;
+    text-align: left;
+}
+
+.post-all {
+    border: 0px solid green;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-all > p {
+    display: inline;
+}
+.post-all > a {
+    padding: 0px 10px;
+    color: #809aaa;
+    text-decoration: underline;
+}
+.responce {
+    display: none;
+}
+.main_navbar {
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+.nav_link {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+.nav_link > a{
+    font-size: 12px;
+}
+.nav_link:hover div {
+    display: block;
+}
+
+.nav_child {
+    top: 100%;
+    border-radius: 8px;
+    width: 20vw;
+    padding: 20px 20px 0px 20px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    text-align: left;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav_child > h3 {
+    font-family: "Pathway Gothic One", sans-serif;
+    cursor: pointer;
+}
+.nav_child > ul > li {
+    list-style: none;
+    font-size: 12px;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.nav_child > ul > li:hover {
+    text-decoration: underline;
+}
+@media all and (min-width: 230px) and (max-width: 990px) {
+    .responce {
+        display: block;
+        width: 50px;
+        text-align: center;
+    }
+    .nav_root > img {
+        width: 40px;
+    }
+    .main_navbar {
+        display: none;
+    }
+    .nav_icon {
+        display: none;
+    }
+    .drawerbody {
+        border: 0px solid red;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_link {
+        margin: 20px 0px 20px 10px;
+        border-bottom: 0.5px solid transparent;
+
+    }
+    .nav_link:hover {
+        /* text-decoration: underline; */
+        border-bottom: 0.5px solid gray;
+    }
+    .nav_icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 0.5px solid #e2e8f0;
+    }
+    .dropdown-menus {
+        position: relative;
+        display: inline-block;
+    }
+    .all-logs {
+        bottom: 100%;
+        background-color: #fff;
+        border: 0px solid transparent;
+        border-radius: 20px;
+        width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        transition: all 0.2s ease-in-out;
+        text-align: left;
+        display: none;
+        position: absolute;
+        z-index: 15;
+    }
+    .dropdown-menus:hover .all-logs {
+        display: block;
+    }
+    .dropdown-menus:not(:hover) .all-logs {
+        display: none;
+    }
+    .dropdown-menus li {
+        cursor: pointer;
+    }
+}
