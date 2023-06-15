@@ -25,7 +25,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
 		.post(
-			"https://cute-ruby-rattlesnake-wig.cyclic.app/shipping/add",
+			"https://gadget-hunt.onrender.com/shipping/add",
 
 			payload
 		)
@@ -41,7 +41,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
-		.get("https://cute-ruby-rattlesnake-wig.cyclic.app/shipping")
+		.get("https://gadget-hunt.onrender.com/shipping")
 		.then((res) => {
 			console.log("get", res.data);
 			dispatch(getdataSuccessAddress(res.data));

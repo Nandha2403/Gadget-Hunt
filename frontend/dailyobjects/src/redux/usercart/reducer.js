@@ -1,4 +1,4 @@
-import { APPLY_COUPON_DISCOUNT,
+import { ADD_CART_DATA_SUCCESS, APPLY_COUPON_DISCOUNT,
     APPLY_GIFTCARD,
     CART_PAGE_TOTAL_AMOUNT,
      CART_PAGE_TOTAL_ITEMS,
@@ -25,6 +25,8 @@ import { APPLY_COUPON_DISCOUNT,
        return { ...state, isLoading: false, cart: payload };
      case GET_CART_DATA_FAILURE:
        return { ...state, isLoading: false, isError: true };
+    case ADD_CART_DATA_SUCCESS:
+      return {...state, isLoading: false, isError:false,cart:[...state.cart,payload]}
      case QUANTITY_CHANGE_SUCCESS:
        return {...state, isLoading: false}
      case CART_PAGE_TOTAL_AMOUNT:

@@ -439,6 +439,7 @@ const Navbar = () => {
                           borderRadius={"8px"}
                           variant="subtle"
                           colorScheme="green"
+                          color={"red"}
                         >
                           {items.length > 0 ? items : ""}
                         </Badge>

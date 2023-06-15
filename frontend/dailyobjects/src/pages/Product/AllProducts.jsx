@@ -25,7 +25,7 @@ const AllProducts = () => {
           setcases(true)
         }
         axios
-					.get(`https://cute-ruby-rattlesnake-wig.cyclic.app?Category=${x}`)
+					.get(`https://gadget-hunt.onrender.com/products?Category=${x}`)
 					.then((res) => setdata(res.data));
     }, [x]);
 
@@ -48,7 +48,7 @@ const AllProducts = () => {
     const productcategory = (category) => {
         setdata([]);
         axios
-					.get(`https://cute-ruby-rattlesnake-wig.cyclic.app/products?Category=${category}`)
+					.get(`https://gadget-hunt.onrender.com/products?Category=${category}`)
 					.then((res) => setdata(res.data));
     };
 
@@ -57,7 +57,7 @@ const AllProducts = () => {
         setdata([]);
         axios
 					.get(
-						`https://cute-ruby-rattlesnake-wig.cyclic.app/products?Category=Watchbands&Category=Charging Solutions&Category=Macbook Sleeve&Category=Messanger Bags&Category=Eyewear&Category=Desks`
+						`https://gadget-hunt.onrender.com/products?Category=Watchbands&Category=Charging Solutions&Category=Macbook Sleeve&Category=Messanger Bags&Category=Eyewear&Category=Desks`
 					)
 					.then((res) => setdata(res.data));
     }
@@ -66,7 +66,7 @@ const AllProducts = () => {
         setdata([]);
         axios
 					.get(
-						`https://cute-ruby-rattlesnake-wig.cyclic.app/products?Category=Passport wallet&Category=Airpods pro Cases&Category=Eyewear cases&Category=Ipad cover&Category=Laptop cover&Category=Phone Cases`
+						`https://gadget-hunt.onrender.com/products?Category=Passport wallet&Category=Airpods pro Cases&Category=Eyewear cases&Category=Ipad cover&Category=Laptop cover&Category=Phone Cases`
 					)
 					.then((res) => setdata(res.data));
     }
@@ -86,10 +86,10 @@ const AllProducts = () => {
                 textAlign={"center"}>
                 NEW ARRIVALS
             </Text>
-            <Box w={{lg:"55%",md:"95%"}} display={"flex"} gap="2%" m="auto" mt="3%">
+            <Box w={{lg:"55%",md:"95%",sm:"100%"}} display={"flex"} gap="2%" m="auto" mt="3%" >
                 <Box onClick={Allproctsshow}>
-                    <Box borderRadius={"50%"} h="61%" w="68px" bg="green">
-                        <Text textAlign={"center"} pt="25px" color={"white"}>
+                    <Box borderRadius={"70%"} h="50%" w="58px" bg="green">
+                        <Text textAlign={"center"} pt="15px" mt={"10px"}  color={"white"}>
                             All
                         </Text>
                     </Box>
@@ -102,6 +102,7 @@ const AllProducts = () => {
                     <Image
                         borderRadius={"50%"}
                         m="auto"
+                        mt={"10px"}
                         src="https://images.dailyobjects.com/marche/icons/category/platrorm-desk-collection.png?tr=cm-pad_resize,v-2,w-70,h-70,dpr-1"
                     />
                     <Text textAlign={"center"} fontSize={"sm"}>
@@ -116,7 +117,7 @@ const AllProducts = () => {
                         m="auto"
                         src="https://images.dailyobjects.com/marche/assets/images/other/filter-icon.jpg?tr=cm-pad_crop,v-2,w-70,h-70,dpr-1"
                     />
-                    <Text textAlign={"center"}>Pedal Backpack</Text>
+                    <Text textAlign={"center"} fontSize={"sm"}>Pedal Backpack</Text>
                 </Box>
 
                 <Box
@@ -284,7 +285,7 @@ const AllProducts = () => {
             <Box display={"flex"}>
                 <Box>
                     <Grid
-                        templateColumns={{lg:filters ? "repeat(3, 1fr)" : "repeat(4, 1fr)",md:filters ? "repeat(2, 1fr)" : "repeat(3, 1fr)",md:filters ? "repeat(1, 1fr)" : "repeat(2, 1fr)"}}
+                        templateColumns={{lg:filters ? "repeat(3, 1fr)" : "repeat(4, 1fr)",md:filters ? "repeat(2, 1fr)" : "repeat(3, 1fr)",sm:filters ? "repeat(1, 1fr)" : "repeat(2, 1fr)"}}
                         gap={7}
                         w="95%"
                         m="auto">

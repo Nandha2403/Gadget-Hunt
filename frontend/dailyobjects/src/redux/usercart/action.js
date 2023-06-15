@@ -8,7 +8,12 @@ import {
   GET_CART_DATA_SUCCESS,
   QUANTITY_CHANGE_SUCCESS,
   APPLY_GIFTCARD,
+  ADD_CART_DATA_SUCCESS,
 } from "./action.type";
+
+const addCartDataAction = (payload) => {
+  return { type: ADD_CART_DATA_SUCCESS, payload };
+};
 
 const getCartDataRequestAction = () => {
   return { type: GET_CART_DATA_REQUEST };
@@ -42,11 +47,21 @@ const applyGiftCard = (payload) => {
   return { type: APPLY_GIFTCARD, payload };
 };
 
+export const addCartData = (data) => async (dispatch) => {
+  await axios
+    .post("https://gadgetgalaxy.cyclic.app/cart/add", data)
+    .then((res) => {
+      dispatch(addCartDataAction(data))
+    }).catch((err)=>{
+      console.log(err);
+    })
+};
+
 export const getCartData = (dispatch) => {
   dispatch(getCartDataRequestAction());
 
   axios
-    .get("https://cute-ruby-rattlesnake-wig.cyclic.app/carts", {
+    .get("https://gadgetgalaxy.cyclic.app/cart", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
@@ -65,7 +80,7 @@ export const getCartData = (dispatch) => {
 export const handleQuantity = (id, quantity) => (dispatch) => {
   axios
     .patch(
-      `https://cute-ruby-rattlesnake-wig.cyclic.app/cart/update/${id}`,
+      `https://gadgetgalaxy.cyclic.app/cart/update/${id}`,
       {
         Quantity: +quantity,
       },
@@ -78,7 +93,7 @@ export const handleQuantity = (id, quantity) => (dispatch) => {
     )
     .then((res) => {
       axios
-        .get(`https://cute-ruby-rattlesnake-wig.cyclic.app/cart`, {
+        .get(`https://gadgetgalaxy.cyclic.app/cart`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
             "Content-Type": "application/json",
@@ -94,7 +109,7 @@ export const handleQuantity = (id, quantity) => (dispatch) => {
 
 export const handleRemove = (id) => (dispatch) => {
   axios
-    .delete(`https://cute-ruby-rattlesnake-wig.cyclic.app/cart/delete/${id}`, {
+    .delete(`https://gadgetgalaxy.cyclic.app/cart/delete/${id}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
@@ -102,7 +117,7 @@ export const handleRemove = (id) => (dispatch) => {
     })
     .then((res) => {
       axios
-        .get(`https://cute-ruby-rattlesnake-wig.cyclic.app/cart`, {
+        .get(`https://gadgetgalaxy.cyclic.app/cart`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
             "Content-Type": "application/json",

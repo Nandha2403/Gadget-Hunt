@@ -2,7 +2,7 @@ import axios from "axios";
 export const adminLoginApi = async (payload) => {
 	try {
 		let response = await axios.post(
-			"https://cute-ruby-rattlesnake-wig.cyclic.app/admin/login",
+			"https://gadgetgalaxy.cyclic.app/admin/login",
 			payload
 		);
 		return response.data;
@@ -10,3 +10,4 @@ export const adminLoginApi = async (payload) => {
 		console.error("userLoginAPI error", e);
 	}
 };
+// register

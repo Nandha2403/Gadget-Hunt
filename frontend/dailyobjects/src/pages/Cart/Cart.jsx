@@ -29,6 +29,7 @@ import {
 	handleCouponDiscount,
 	handleGiftCardDiscount,
 } from "../../redux/usercart/action";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Cart = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,6 +59,7 @@ const Cart = () => {
 
 	return (
 		<Box width="100%">
+			<Navbar />
 			<Box marginTop="100px">
 				<Heading textAlign="center" marginBottom="5">
 					Shopping Bag{" "}

@@ -1,9 +1,5 @@
 import React from 'react'
-
-const LoadingSkeleton = () => {
-  return (
-    <div>LoadingSkeleton</div>
-  )
-}
+import { Skeleton } from "antd";
+const LoadingSkeleton = () => <Skeleton active rows={20} />;
 
 export default LoadingSkeleton

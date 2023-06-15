@@ -12,10 +12,10 @@ import Checkout from "../pages/Checkout/Checkout";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/login";
 import AllProducts from "../pages/Product/AllProducts";
-import Productdetails from "../pages/Productdetails";
 import Search from "../pages/Search/Search";
 import Signup from "../pages/Signup/Signup";
 import Wishlist from "../pages/Wishlists/Wishlist";
+import ProductDetails from "../pages/Productdetails";
 
 
 export const AllRoutes = () => {
@@ -25,7 +25,7 @@ export const AllRoutes = () => {
 			<Route path="/products/:id" element={<AllProducts />} />
 			<Route path="/login" element={<Login />} />
 			<Route path="/Signup" element={<Signup />} />
-			<Route path="/productdetails/:id" element={<Productdetails />} />
+			<Route path="/productdetails/:id" element={<ProductDetails />} />
 			<Route
 				path="/admin"
 				element={
