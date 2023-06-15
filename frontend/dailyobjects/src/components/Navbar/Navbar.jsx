@@ -285,25 +285,25 @@ const Navbar = () => {
             <DrawerBody marginTop={"30px"}>
               <div className="drawerbody">
                 <div className="nav_link">
-                  <Link to="">NEW ARRIVALS</Link>
+                  <Link to="/products/Watchbands">NEW ARRIVALS</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">CASES & SLEEVES</Link>
+                  <Link to="/products/Phone%20Cases">CASES & SLEEVES</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">ACCESSORIES</Link>
+                  <Link to="/products/Laptop%20cover">ACCESSORIES</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">BAGS & WALLETS</Link>
+                  <Link to="/products/Macbook%20Sleeve">BAGS & WALLETS</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">HOME OFFICE</Link>
+                  <Link to="/products/Eyewear">HOME OFFICE</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">COLLECTIONS</Link>
+                  <Link to="/products/Passport%20wallet">COLLECTIONS</Link>
                 </div>
                 <div className="nav_link">
-                  <Link to="">GIFTING</Link>
+                  <Link to="/products/Pedal%20Backpack">GIFTING</Link>
                 </div>
 
                 <div className="nav_icons">

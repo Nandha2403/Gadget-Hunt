@@ -2,7 +2,8 @@ import axios from "axios";
 
 export const getProductFromApi = async () => {
 	try {
-		let response = await axios.get(`https://gadgetgalaxy.cyclic.app/products`);
+		let response = await axios.get(`https://cute-ruby-rattlesnake-wig.cyclic.app/products`);
+		console.log(response.data);
 		return response.data;
 	} catch (error) {
 		return error;
@@ -12,7 +13,7 @@ export const getProductFromApi = async () => {
 export const getSingleProductFromApi = async (id) => {
 	try {
 		let response = await axios.get(
-			`https://gadgetgalaxy.cyclic.app/products/${id}`
+			`https://cute-ruby-rattlesnake-wig.cyclic.app/products/${id}`
 		);
 		return response.data;
 	} catch (error) {
@@ -23,7 +24,7 @@ export const getSingleProductFromApi = async (id) => {
 export const postDataToApi = async (payload) => {
 	try {
 		let response = await axios.post(
-			`https://gadgetgalaxy.cyclic.app/products/add`,
+			`https://cute-ruby-rattlesnake-wig.cyclic.app/products/add`,
 			payload
 		);
 		return response.data;
@@ -35,7 +36,7 @@ export const postDataToApi = async (payload) => {
 export const deleteDataFromApi = async (id) => {
 	try {
 		let response = await axios.delete(
-			`https://gadgetgalaxy.cyclic.app/products/delete/${id}`
+			`https://cute-ruby-rattlesnake-wig.cyclic.app/products/delete/${id}`
 		);
 		return response;
 	} catch (error) {

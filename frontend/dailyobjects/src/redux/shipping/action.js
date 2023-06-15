@@ -25,7 +25,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
 		.post(
-			"https://gadgetgalaxy.cyclic.app/shipping/add",
+			"https://cute-ruby-rattlesnake-wig.cyclic.app/shipping/add",
 
 			payload
 		)
@@ -41,7 +41,7 @@ export const postRequestAddress = (payload) => (dispatch) => {
 export const getRequestAddress = () => (dispatch) => {
 	dispatch(getpostRequest());
 	axios
-		.get("https://gadgetgalaxy.cyclic.app/shipping")
+		.get("https://cute-ruby-rattlesnake-wig.cyclic.app/shipping")
 		.then((res) => {
 			console.log("get", res.data);
 			dispatch(getdataSuccessAddress(res.data));

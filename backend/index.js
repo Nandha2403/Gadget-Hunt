@@ -4,18 +4,18 @@ require("dotenv").config();
 const { connection } = require("./config/db");
 const { adminRouter } = require("./routes/admin.routes");
 const { userRouter } = require("./routes/users.routes");
-const { productRouter } = require("./routes/products.routes");
 const { orderRouter } = require("./routes/orders.routes");
-const { cartRouter } = require("./routes/carts.routes");
 const { auth } = require("./middleware/auth.middleware");
+const { productRouter } = require("./routes/products.routes");
+const { cartRouter } = require("./routes/carts.routes");
 
 const app = express();
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.send({msg:"Welcome to the Gadget Hunt"})
 });
 
-app.use(cors());
 app.use(express.json());
 app.use("/users", userRouter);
 app.use("/products", productRouter);

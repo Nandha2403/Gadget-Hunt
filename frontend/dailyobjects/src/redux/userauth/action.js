@@ -13,6 +13,7 @@ export const error = () => {
 };
 
 export const loginSuccess = (payload) => {
+	console.log(payload);
 	return {
 		type: types.Login_Success,
 		payload,
