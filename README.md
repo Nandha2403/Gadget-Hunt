@@ -1,4 +1,4 @@
-# Gadget-Hunt.com
+# GadgetHunt.com
 
 GadgetHunt is a clone of an Indian online store that specializes in selling a wide range of designer mobile phone cases, laptop sleeves, and other tech accessories
 
@@ -177,4 +177,4 @@ Link https://statuesque-kringle-865375.netlify.app/
 
 #### Is this website fully Responsive?
 
-No, As of Now this website isn't fully Responsive. Some of our the part of this website is broken for small screen devices. I am working on this soon I will fix this.
+No, As of Now this website isn't fully Responsive. Some part of this website is broken for small screen devices. I am working on this soon I will fix this.
